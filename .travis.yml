@@ -1,0 +1,30 @@
+language: node_js
+node_js: 7
+notifications:
+  email: false
+env:
+  global:
+    - IP: 107.170.89.65
+    - USER: root
+    - REPOSITORY: https://github.com/jlobos/blog.git
+    - CONTAINER_NAME: blog
+script:
+  - yarn test
+cache: yarn
+before_deploy:
+  # Decrypt the travis secrets
+  - openssl aes-256-cbc -K $encrypted_db9b3d241e79_key -iv $encrypted_db9b3d241e79_iv -in .deploy_key.enc -out deploy_key -d
+  - eval "$(ssh-agent -s)"
+  - chmod 600 deploy_key
+  - ssh-add deploy_key
+  - echo -e "Host deploy\nHostName ${IP}\nUser ${USER}\nStrictHostKeyChecking no" > ~/.ssh/config
+  # Build docker image
+  - ssh deploy docker build -t ${CONTAINER_NAME} ${REPOSITORY}
+  # Delete old container
+  - ssh deploy "if docker ps -a --format={{.Names}} | grep -q ${CONTAINER_NAME}; then docker rm -f ${CONTAINER_NAME}; fi"
+deploy:
+  provider: script
+  script: ssh deploy docker run -d --name ${CONTAINER_NAME} ${CONTAINER_NAME}
+  skip_cleanup: true
+  on:
+    branch: master

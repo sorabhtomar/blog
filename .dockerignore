@@ -1,0 +1,15 @@
+# dependencies
+node_modules
+
+# build output
+.next
+
+# others
+.deploy_key.enc
+.git
+.gitignore
+.travis.yml
+
+# markdown
+license.md
+readme.md
