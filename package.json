@@ -2,8 +2,7 @@
   "name": "jlobos-blog",
   "description": "jlobos.com (blog)",
   "scripts": {
-    "build": "npm run clean && next build",
-    "clean": "rimraf .next",
+    "build": "next build",
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
     "test": "standard"
@@ -17,7 +16,6 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
-    "rimraf": "^2.6.1",
     "standard": "^10.0.2"
   }
 }
