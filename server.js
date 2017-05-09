@@ -2,7 +2,7 @@
 const express = require('express')
 const next = require('next')
 
-const { PORT } = process.env
+const { NODE_PORT } = process.env
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -14,5 +14,5 @@ app.prepare()
 
   server.get('*', (req, res) => handle(req, res))
 
-  server.listen(PORT || 3000)
+  server.listen(NODE_PORT || 3000)
 })
