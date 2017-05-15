@@ -4,25 +4,31 @@ notifications:
   email: false
 env:
   global:
-    - IP: 107.170.89.65
-    - USER: root
-    - REPOSITORY: https://github.com/jlobos/blog.git
-    - CONTAINER_NAME: blog
-script:
-  - yarn test
+    - SSH_IP: 107.170.89.65
+    - SSH_USER: root
+    - DOCKER_REPOSITORY: jlobos/blog
+    - DOCKER_CONTAINER_NAME: blog
+services:
+  - docker
 cache: yarn
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    curl -sSL https://get.docker.com/ | sh;
+    docker version;
+    docker build -t ${DOCKER_REPOSITORY} .;
+    docker login -u=${DOCKER_USERNAME} -p=${DOCKER_PASSWORD};
+    docker push ${DOCKER_REPOSITORY};
+    fi
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_e02ba6df3dde_key -iv $encrypted_e02ba6df3dde_iv -in .deploy_key.enc -out deploy_key -d
   - eval "$(ssh-agent -s)"
   - chmod 600 deploy_key
   - ssh-add deploy_key
-  - echo -e "Host deploy\nHostName ${IP}\nUser ${USER}\nStrictHostKeyChecking no" > ~/.ssh/config
-  - ssh deploy docker build -t ${CONTAINER_NAME} ${REPOSITORY}
-  - ssh deploy "if docker ps -a --format={{.Names}} | grep -q ${CONTAINER_NAME}; then docker rm -f ${CONTAINER_NAME}; fi"
+  - echo -e "Host deploy\nHostName ${SSH_IP}\nUser ${SSH_USER}\nStrictHostKeyChecking no" > ~/.ssh/config
+  - ssh deploy "if docker ps -a --format={{.Names}} | grep -q ${DOCKER_CONTAINER_NAME}; then docker rm -f ${DOCKER_CONTAINER_NAME}; fi"
 deploy:
   provider: script
-  script: ssh deploy docker run -d --name ${CONTAINER_NAME} ${CONTAINER_NAME}
+  script: ssh deploy docker run -d --name ${DOCKER_CONTAINER_NAME} ${DOCKER_REPOSITORY}
   skip_cleanup: true
   on:
     branch: master
-before_install:
