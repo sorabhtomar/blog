@@ -22,6 +22,7 @@ before_deploy:
   - chmod 600 deploy_key
   - ssh-add deploy_key
   - echo -e "Host deploy\nHostName ${SSH_IP}\nUser ${SSH_USER}\nStrictHostKeyChecking no" > ~/.ssh/config
+  - ssh deploy docker pull ${DOCKER_REPOSITORY}
   - ssh deploy "if docker ps -a --format={{.Names}} | grep -q ${DOCKER_CONTAINER_NAME}; then docker rm -f ${DOCKER_CONTAINER_NAME}; fi"
 deploy:
   provider: script
