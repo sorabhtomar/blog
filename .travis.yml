@@ -11,15 +11,12 @@ env:
 services:
   - docker
 cache: yarn
-after_success:
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    curl -sSL https://get.docker.com/ | sh;
-    docker version;
-    docker build -t ${DOCKER_REPOSITORY} .;
-    docker login -u=${DOCKER_USERNAME} -p=${DOCKER_PASSWORD};
-    docker push ${DOCKER_REPOSITORY};
-    fi
 before_deploy:
+  - curl -sSL https://get.docker.com/ | sh
+  - docker version
+  - docker build -t ${DOCKER_REPOSITORY} .
+  - docker login -u=${DOCKER_USERNAME} -p=${DOCKER_PASSWORD}
+  - docker push ${DOCKER_REPOSITORY}
   - openssl aes-256-cbc -K $encrypted_e02ba6df3dde_key -iv $encrypted_e02ba6df3dde_iv -in .deploy_key.enc -out deploy_key -d
   - eval "$(ssh-agent -s)"
   - chmod 600 deploy_key
