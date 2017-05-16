@@ -3,10 +3,9 @@ export default ({ children }) => (
     { children }
     <style jsx>{`
       code {
-        color: #ED4264;
+        color: #999;
         font-family: 'Vibur', cursive;
         font-size: 15px;
-        font-style: italic;
       }
     `}</style>
   </code>

@@ -3,9 +3,7 @@ export default ({ children }) => (
     { children }
     <style jsx>{`
       code {
-        background-color: #dedede;
-        border-radius: 3px;
-        padding: 0 3px;
+        color: #ED4264;
       }
     `}</style>
   </code>
