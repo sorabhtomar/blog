@@ -8,8 +8,6 @@ import Quote from '../components/post/quote'
 import { UL, LI } from '../components/post/list'
 import Code from '../components/post/code'
 import Snippet from '../components/post/snippet'
-import A from '../components/post/hyperlink'
-import Comment from '../components/post/comment'
 
 // Instagram Stories
 import Stories from '../lib/instagram-stories/components/stories'
