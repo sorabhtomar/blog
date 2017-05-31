@@ -7,7 +7,7 @@ export default ({ id, date, title }) => (
 
     <style jsx>{`
       .post {
-        margin: 0 auto 6px auto;
+        margin: 6px auto 0 auto;
         max-width: 650px;
         padding: 0 27px;
       }
