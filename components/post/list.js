@@ -3,9 +3,9 @@ export const UL = ({ children }) => (
     { children }
     <style jsx>{`
       ul {
-        margin: 0 0 20px 0;
-        padding: 0;
         list-style-type: none;
+        margin: 0 0 27px 0;
+        padding: 0;
       }
     `}</style>
   </ul>
@@ -16,16 +16,16 @@ export const LI = ({ children }) => (
     { children }
     <style jsx>{`
       li {
-        margin-bottom: 5px;
-        padding-left: 20px;
         line-height: 24px;
+        margin-bottom: 3px;
+        padding-left: 20px;
       }
 
       li:before {
+        color: #ED4264;
         content: '-';
-        color: #ABABAB;
-        position: absolute;
         margin-left: -20px;
+        position: absolute;
       }
     `}</style>
   </li>
