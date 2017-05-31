@@ -3,7 +3,9 @@ import Link from 'next/link'
 export default ({ id, date, title }) => (
   <div className='post'>
     <span className='date'>{ date }</span>
-    <Link href={`/${new Date(date).getFullYear()}/${id}`}><a>{ title }</a></Link>
+    <Link prefetch href={`/${new Date(date).getFullYear()}/${id}`}>
+      <a>{ title }</a>
+    </Link>
 
     <style jsx>{`
       .post {

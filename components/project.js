@@ -21,7 +21,9 @@ export const Title = () => (
 
 export default ({ id, title }) => (
   <div>
-    <Link href={`/${id}`}><a>{ title }</a></Link>
+    <Link prefetch href={`/${id}`}>
+      <a>{ title }</a>
+    </Link>
 
     <style jsx>{`
       div::before { content: "► "; }
