@@ -6,7 +6,7 @@ export default ({ children }) => (
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#000000' />
 
-      <link href='https://fonts.googleapis.com/css?family=Vibur' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Vibur|Montserrat' rel='stylesheet' />
       <link href='https://cdn.rawgit.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf' rel='stylesheet' />
 
       {/* Google Analytics */}
@@ -34,7 +34,7 @@ export default ({ children }) => (
       }
 
       body {
-        font-family: 'Fira Mono', monospace;
+        font-family: 'Montserrat', sans-serif;
       }
     `}</style>
   </div>
