@@ -6,8 +6,7 @@ export default ({ children }) => (
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='theme-color' content='#000000' />
 
-      <link href='https://fonts.googleapis.com/css?family=Vibur|Montserrat' rel='stylesheet' />
-      <link href='https://cdn.rawgit.com/tonsky/FiraCode/master/distr/ttf/FiraCode-Regular.ttf' rel='stylesheet' />
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' />
 
       {/* Google Analytics */}
       <script dangerouslySetInnerHTML={{ __html: `
@@ -28,13 +27,14 @@ export default ({ children }) => (
       a:hover { color: #ED4264; }
       a {
         color: #000;
-        font-size: 12px;
+        font-size: 1em;
         text-decoration: none;
         transition: all 0.2s ease;
       }
 
       body {
         font-family: 'Montserrat', sans-serif;
+        font-size: .9em;
       }
     `}</style>
   </div>

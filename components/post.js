@@ -15,9 +15,9 @@ export default ({ id, date, title }) => (
       }
 
       .date {
+        color: rgba(0, 0, 0, .5);
         display: block;
-        color: #999;
-        font-size: 12px;
+        font-size: .8em;
         text-transform: lowercase;
       }
 

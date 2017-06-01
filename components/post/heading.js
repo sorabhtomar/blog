@@ -1,6 +1,6 @@
 /* global React */
 
-const H = ({ id, level = 2, fontSize = 18, children }) => (
+const H = ({ id, level = 2, fontSize = '1.3em', children }) => (
   <div>
     {
       React.createElement(`h${level}`,
@@ -23,7 +23,7 @@ const H = ({ id, level = 2, fontSize = 18, children }) => (
 )
 
 const H2 = H
-const H3 = (props) => H({ ...props, level: 3, fontSize: 15 })
+const H3 = (props) => H({ ...props, level: 3, fontSize: '1.1em' })
 
 export default H2
 export { H2, H3 }

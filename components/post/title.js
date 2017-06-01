@@ -4,7 +4,7 @@ export default ({ children }) => (
     <style jsx>{`
       h1 {
         color: #000;
-        font-size: 24px;
+        font-size: 2em;
         font-weight: 500;
         margin-bottom: 27px;
       }

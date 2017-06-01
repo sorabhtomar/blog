@@ -3,7 +3,7 @@ export default ({ children }) => (
     { children }
     <style jsx>{`
       p {
-        font-size: 12px;
+        color: rgba(0, 0, 0, .8);
         margin-bottom: 27px;
       }
     `}</style>

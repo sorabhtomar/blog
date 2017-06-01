@@ -10,9 +10,8 @@ export default ({ children, views }) => (
 
     <style jsx>{`
       article {
-        font-size: 12px;
         margin: 0 auto;
-        max-width: 650px;
+        max-width: 740px;
         padding: 0 27px;
       }
     `}</style>

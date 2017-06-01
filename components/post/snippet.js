@@ -11,8 +11,9 @@ export default ({ children }) => (
       }
 
       code {
-        color: #000;
-        font-family: 'Fira Code', monospace;
+        color: rgba(0, 0, 0, .6);
+        font-family: 'Montserrat', monospace;
+        font-size: .9em;
       }
     `}</style>
   </pre>

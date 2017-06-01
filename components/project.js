@@ -5,7 +5,7 @@ export const Title = () => (
     PROJECTS
     <style jsx>{`
       h2 {
-        font-size: 12px;
+        font-size: 1.3em;
         font-weight: 500;
         margin: 0 auto;
         max-width: 650px;

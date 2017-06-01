@@ -10,7 +10,7 @@ export default ({ views }) => (
 
     <style jsx>{`
       footer {
-        font-size: 12px;
+        font-size: .8em;
         padding: 27px 0;
         text-align: center;
       }

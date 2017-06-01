@@ -10,7 +10,7 @@ export default ({ by, children }) => (
     <style jsx>{`
       blockquote {
         border-left: 1px solid #000;
-        color: #999;
+        color: rgba(0, 0, 0, .5);
         margin-bottom: 27px;
         padding-left: 9px;
       }
