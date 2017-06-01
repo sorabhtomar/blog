@@ -143,6 +143,7 @@ export default withViews(({ views }) => (
 ├── test
 │   ├── components
 │   └── lib
+├── .babelrc
 ├── package.json
 ├── webpack.config.js
 └── yarn.lock`}
