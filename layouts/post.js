@@ -1,19 +1,13 @@
-import Page from './main'
-import Footer from '../components/footer'
-import Triangle from '../components/triangles/main'
+// Ours
+import Main from './main'
 
-export default ({ children, views }) => (
-  <Page>
-    <header><Triangle /></header>
-    <article>{ children }</article>
-    <Footer views={views} />
+// Styles
+import postStyles from '../styles/post'
 
-    <style jsx>{`
-      article {
-        margin: 0 auto;
-        max-width: 740px;
-        padding: 0 27px;
-      }
-    `}</style>
-  </Page>
-)
+export default ({ children }) =>
+  <Main>
+    {children}
+    <style jsx global>
+      {postStyles}
+    </style>
+  </Main>

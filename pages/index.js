@@ -1,46 +1,43 @@
+// Packages
+import React from 'react'
 import Head from 'next/head'
-import { posts, projects } from '../db'
+
+// Ours
+import { posts } from '../posts/posts.json'
+import db from '../lib/db'
+
+// Components
 import Page from '../layouts/main'
-import withViews from '../lib/with-views'
-import Triangle from '../components/triangles/main'
-import Footer from '../components/footer'
 import Post from '../components/post'
-import Project, { Title } from '../components/project'
+import Header from '../components/header'
 
-export default withViews(({ views }) => (
-  <Page>
-    <Head>
-      <title>Jesús Lobos</title>
-    </Head>
+export default class extends React.Component {
+  static async getInitialProps () {
+    // Get views of firebase
+    const ref = db.ref('views')
+    const views = (await ref.once('value')).val()
 
-    <div className='container'>
-      <header><Triangle /></header>
+    return {
+      // Inject views in list of post
+      posts: posts.map(p => Object.assign({}, p, { views: views[p.id] }))
+    }
+  }
 
-      <div>
-        {
-          posts.map(({ id, date, title }) => (
-            <Post id={id} key={id} date={date} title={title} />
-          ))
-        }
+  render () {
+    const { posts } = this.props
 
-        <Title />
-        {
-          projects.map(({ id, title }) => (
-            <Project id={id} key={id} title={title} />
-          ))
-        }
-      </div>
+    return (
+      <Page>
+        <Head>
+          <title>jlobos</title>
+        </Head>
 
-      <Footer views={views} />
-    </div>
-
-    <style jsx>{`
-      .container {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        justify-content: space-between;
-      }
-    `}</style>
-  </Page>
-))
+        <Header>
+          <main>
+            { posts.map(props => <Post key={props.id} {...props} />) }
+          </main>
+        </Header>
+      </Page>
+    )
+  }
+}

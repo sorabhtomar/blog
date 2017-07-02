@@ -1,4 +1,8 @@
+// Packages
 import Head from 'next/head'
+
+// Styles
+import rootStyles from '../styles/root'
 
 export default ({ children }) => (
   <div>
@@ -16,26 +20,8 @@ export default ({ children }) => (
         `}} />
     </Head>
 
-    { children }
+    {children}
 
-    <style jsx global>{`
-      * {
-        margin: 0;
-        box-sizing: border-box;
-      }
-
-      a:hover { color: #ED4264; }
-      a {
-        color: #000;
-        font-size: 1em;
-        text-decoration: none;
-        transition: all 0.2s ease;
-      }
-
-      body {
-        font-family: 'Montserrat', sans-serif;
-        font-size: .9em;
-      }
-    `}</style>
+    <style jsx global>{rootStyles}</style>
   </div>
 )

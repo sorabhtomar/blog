@@ -5,16 +5,19 @@
     "build": "next build",
     "dev": "node server.js",
     "start": "NODE_ENV=production node server.js",
-    "test": "standard"
+    "test": "standard",
+    "words": "wc -w posts/*.md"
   },
   "dependencies": {
+    "babel-plugin-transform-define": "^1.3.0",
     "compression": "^1.6.2",
     "express": "^4.15.3",
-    "firebase": "^4.1.1",
+    "firebase": "^4.1.3",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^2.4.0",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "marked": "^0.3.6",
+    "next": "^2.4.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
   },
   "devDependencies": {
     "standard": "^10.0.2"
