@@ -21,31 +21,39 @@ export default class extends React.Component {
 
   render () {
     const { isMenuHidden } = this.state
-    const { image } = this.props
-    const headerStyle = image
+    const { url, credit } = this.props.image || {}
+    const headerStyle = url
       ? {
-        backgroundImage: `url(${image})`,
-        paddingBottom: '50vh',
+        backgroundImage: `url(${url})`,
+        height: '60vh',
         marginBottom: '2rem'
-      } : {}
+      }
+      : {}
 
     return (
-      <div className={isMenuHidden ? 'nav-closed' : 'nav-opened'} >
-        <header style={headerStyle} >
-          <Logo />
-          <Navegation />
+      <div className={isMenuHidden ? 'nav-closed' : 'nav-opened'}>
+        <header style={headerStyle}>
+          <div className='header-content'>
+            <Logo />
+            <Navegation />
 
-          <div onClick={this.handleOnClick} className='menu-button'>
-            ☰ MENU
+            <div onClick={this.handleOnClick} className='menu-button'>
+              ☰ MENU
+            </div>
+
+            {/* Right Menu */}
+            <div className='menu'>
+              <Menu />
+            </div>
           </div>
 
-          {/* Right Menu */}
-          <div className='menu' >
-            <Menu />
-          </div>
+          {credit &&
+            <p className='credit'>
+              {credit}
+            </p>}
         </header>
 
-        { this.props.children }
+        {this.props.children}
 
         <style jsx>{`
           .nav-opened,
@@ -57,17 +65,19 @@ export default class extends React.Component {
             transform: translateX(-50vw);
           }
 
-          .nav-closed {
-            transform: translateX(0);
-          }
-
           header {
-            align-items: center;
             background-position: 50% 50%;
             background-size: cover;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .header-content {
+            align-items: center;
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
             padding: 2rem 1rem;
           }
 
@@ -84,6 +94,25 @@ export default class extends React.Component {
             top: 0;
             transform: translateX(50vw);
             width: 50vw;
+          }
+
+          .credit {
+            margin: 0 1rem 1rem auto;
+          }
+
+          @media (min-width: 500px) {
+            .nav-opened {
+              transform: translateX(-20vw);
+            }
+
+            header {
+              padding: 0 2rem;
+            }
+
+            .menu {
+              transform: translateX(20vw);
+              width: 20vw;
+            }
           }
         `}</style>
       </div>

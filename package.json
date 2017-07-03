@@ -17,6 +17,7 @@
     "marked": "^0.3.6",
     "next": "^2.4.6",
     "react": "^15.6.1",
+    "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {

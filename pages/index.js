@@ -10,6 +10,7 @@ import db from '../lib/db'
 import Page from '../layouts/main'
 import Post from '../components/post'
 import Header from '../components/header'
+import Footer from '../components/footer'
 
 export default class extends React.Component {
   static async getInitialProps () {
@@ -32,11 +33,21 @@ export default class extends React.Component {
           <title>jlobos</title>
         </Head>
 
-        <Header>
+        <Header image={{ url: '' }}>
           <main>
-            { posts.map(props => <Post key={props.id} {...props} />) }
+            {posts.map(props => <Post key={props.id} {...props} />)}
           </main>
+          <Footer />
         </Header>
+
+        <style jsx>{`
+          main {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            max-width: 700px;
+          }
+        `}</style>
       </Page>
     )
   }

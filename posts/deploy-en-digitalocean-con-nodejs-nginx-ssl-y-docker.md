@@ -1,4 +1,4 @@
-En este artículo explicaré como montar una arquitectura de principio a fin con Node.js, Nginx como proxy y un certificado gratis SSL con Certbot todo esto manejando contenedores de Docker
+En este artículo explicaré como montar una arquitectura de principio a fin con Node.js, Nginx como proxy y un certificado gratis SSL con Certbot todo esto manejando contenedores de Docker.
 
 > Todo este procedimiento se realizó para levantar este blog, en la lectura aparecerán los diferentes repositorios.
 

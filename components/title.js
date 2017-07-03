@@ -4,18 +4,23 @@ export default ({ title, date, views }) =>
       {title}
     </h1>
 
-    <div className='meta'>
-      <span>
-        {date}
-      </span>
-      <span>
-        {views} views
-      </span>
-    </div>
+    {(date || views) &&
+      <div className='meta'>
+        <span>
+          {date}
+        </span>
+        <span>
+          {views} views
+        </span>
+      </div>}
 
     <style jsx>{`
       .title {
-        margin: 0 1rem;
+        // margin: 0 1rem;
+        padding: 0 1rem;
+
+        max-width: 700px;
+        margin: 0 auto;
       }
 
       .meta {

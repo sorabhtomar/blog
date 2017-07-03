@@ -12,6 +12,7 @@ export default () =>
     <style jsx>{`
       h1 {
         font-size: var(--font-size-header);
+        display: inline;
       }
     `}</style>
   </div>

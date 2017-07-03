@@ -1,13 +1,16 @@
 export default `
   article {
-    margin: 2rem 1rem;
+    padding: 2rem 1rem 0 1rem;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   article h1 {
     margin-bottom: 2rem;
   }
 
-  article h2 {
+  article h2,
+  article h3 {
     margin: 2rem 0;
   }
 
@@ -37,5 +40,16 @@ export default `
     margin-bottom: 1rem;
     padding: 1rem;
     white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  article img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  #disqus_thread {
+    margin-top: 2rem;
   }
 `

@@ -24,15 +24,15 @@ export default `
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.6rem;
   }
 
   h3 {
-    font-size: .9rem;
+    font-size: 1.3rem;
   }
 
   span,
@@ -47,5 +47,11 @@ export default `
     color: var(--high-color);
     text-decoration: none;
     transition: color 0.2s ease;
+  }
+
+  @media (min-width: 500px) {
+    article {
+      padding: 0 2rem;
+    }
   }
 `
