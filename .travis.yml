@@ -1,32 +1,13 @@
 language: node_js
 node_js: 8
+cache: yarn
 notifications:
   email: false
-env:
-  global:
-    - SSH_IP: 107.170.89.65
-    - SSH_USER: root
-    - DOCKER_REPOSITORY: jlobos/blog
-    - DOCKER_CONTAINER_NAME: blog
-services:
-  - docker
-cache: yarn
 before_deploy:
-  - curl -sSL https://get.docker.com/ | sh
-  - docker version
-  - docker build -t ${DOCKER_REPOSITORY} .
-  - docker login -u=${DOCKER_USERNAME} -p=${DOCKER_PASSWORD}
-  - docker push ${DOCKER_REPOSITORY}
-  - openssl aes-256-cbc -K $encrypted_e02ba6df3dde_key -iv $encrypted_e02ba6df3dde_iv -in .deploy_key.enc -out deploy_key -d
-  - eval "$(ssh-agent -s)"
-  - chmod 600 deploy_key
-  - ssh-add deploy_key
-  - echo -e "Host deploy\nHostName ${SSH_IP}\nUser ${SSH_USER}\nStrictHostKeyChecking no" > ~/.ssh/config
-  - ssh deploy docker pull ${DOCKER_REPOSITORY}
-  - ssh deploy "if docker ps -a --format={{.Names}} | grep -q ${DOCKER_CONTAINER_NAME}; then docker rm -f ${DOCKER_CONTAINER_NAME}; fi"
+  - yarn run build
 deploy:
-  provider: script
-  script: ssh deploy docker run -d --name ${DOCKER_CONTAINER_NAME} ${DOCKER_REPOSITORY}
-  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: qq7hdqyuPcRp7RHy5Iw3kIsFFixbGNXlR3mcA08wNdtw/mei2Kj8A34OSEQ2cJXiybeL/48BO0/IUgjxk5DftrgeU1yT4N3LrAb5VEcHIKcLE1KAF0AfaZrQWYCI9JB/W5cJb064Q7T51qakB7fdz5A+pYvXuuBUuVTqVVAAe+WEUbeXd/4pkDBap867Nnhk10AD6ouYoyDb3HerkM2e6UfVq35Owyn6x+wLAbxjlEhRDokyJ5ZOFwmsFbA3usBqzP/gS1CZrCe/2Fv/R+toJL8FkmiOTbEY/zhcy7dlwDlKLiLqjITvaOIN8Yrl84l+bGRF6HQHorfBt4VZItNrt46n0OWvwfJwNXrav+c2JnY5XfHau5NnNwrATNXBGW/oDFOlnnpY58Pcg09x69PEtccNrHf6pX/CYhz5onyG5yLTMHcH5sr+Dmk7Hur4VSlg02eGrNCMXnkbAPPM2VKV4S5GdOl4r/ehoaw1UytXVg0Ol12Ue0bi87pa1Bl4y6YjEFCeTr8UuE9QpduIulLz5UdcGXMBAn+EN0qCLGIsYTga8MFuJo8Pe7Vqv2yS01xVjBa1Mu/mkcJ/Ka3TZia6mNZpJp7BOuAizIGnijMZQ8Ja1wpdmAJHoEOBAU8+SW6wXoSvs2llDiL958LHkkqhwZAaVZsIGJXSdMFi3edsZds=
   on:
     branch: master
