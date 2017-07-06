@@ -3,11 +3,12 @@ node_js: 8
 cache: yarn
 notifications:
   email: false
-before_deploy:
-  - yarn run build
-deploy:
-  provider: firebase
-  token:
-    secure: qq7hdqyuPcRp7RHy5Iw3kIsFFixbGNXlR3mcA08wNdtw/mei2Kj8A34OSEQ2cJXiybeL/48BO0/IUgjxk5DftrgeU1yT4N3LrAb5VEcHIKcLE1KAF0AfaZrQWYCI9JB/W5cJb064Q7T51qakB7fdz5A+pYvXuuBUuVTqVVAAe+WEUbeXd/4pkDBap867Nnhk10AD6ouYoyDb3HerkM2e6UfVq35Owyn6x+wLAbxjlEhRDokyJ5ZOFwmsFbA3usBqzP/gS1CZrCe/2Fv/R+toJL8FkmiOTbEY/zhcy7dlwDlKLiLqjITvaOIN8Yrl84l+bGRF6HQHorfBt4VZItNrt46n0OWvwfJwNXrav+c2JnY5XfHau5NnNwrATNXBGW/oDFOlnnpY58Pcg09x69PEtccNrHf6pX/CYhz5onyG5yLTMHcH5sr+Dmk7Hur4VSlg02eGrNCMXnkbAPPM2VKV4S5GdOl4r/ehoaw1UytXVg0Ol12Ue0bi87pa1Bl4y6YjEFCeTr8UuE9QpduIulLz5UdcGXMBAn+EN0qCLGIsYTga8MFuJo8Pe7Vqv2yS01xVjBa1Mu/mkcJ/Ka3TZia6mNZpJp7BOuAizIGnijMZQ8Ja1wpdmAJHoEOBAU8+SW6wXoSvs2llDiL958LHkkqhwZAaVZsIGJXSdMFi3edsZds=
-  on:
-    branch: master
+branches:
+  only:
+    - master
+before_script:
+  - npm install -g firebase-tools
+script:
+  - npm run build
+after_success:
+  - firebase deploy --token ${FIREBASE_TOKEN}
