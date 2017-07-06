@@ -2,25 +2,25 @@
   "name": "jlobos-blog",
   "description": "jlobos.com (blog)",
   "scripts": {
-    "build": "next build",
-    "dev": "node server.js",
-    "start": "NODE_ENV=production node server.js",
+    "dev": "node src/server.js",
+    "build": "next build src && next export src -o out",
+    "start": "serve out",
     "test": "standard",
-    "words": "wc -w posts/*.md"
+    "clean": "rimraf src/.next out/*"
   },
   "dependencies": {
-    "babel-plugin-transform-define": "^1.3.0",
-    "compression": "^1.6.2",
-    "express": "^4.15.3",
-    "firebase": "^4.1.3",
     "isomorphic-fetch": "^2.2.1",
-    "marked": "^0.3.6",
-    "next": "^2.4.6",
+    "moment": "^2.18.1",
+    "next": "3.0.1-beta.9",
+    "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1"
   },
   "devDependencies": {
+    "express": "^4.15.3",
+    "rimraf": "^2.6.1",
+    "serve": "^6.0.1",
     "standard": "^10.0.2"
   }
 }
