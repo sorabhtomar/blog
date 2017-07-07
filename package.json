@@ -6,7 +6,16 @@
     "build": "next build src && next export src -o out",
     "start": "serve out",
     "test": "standard",
-    "clean": "rimraf src/.next out/*"
+    "clean": "rimraf src/.next out/*",
+    "precommit": "lint-staged",
+    "deploy": "npm run test && npm run clean && npm run build && firebase deploy"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --no-semi --write",
+      "standard --fix",
+      "git add"
+    ]
   },
   "dependencies": {
     "isomorphic-fetch": "^2.2.1",
@@ -19,6 +28,9 @@
   },
   "devDependencies": {
     "express": "^4.15.3",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.1",
+    "prettier": "^1.5.2",
     "rimraf": "^2.6.1",
     "serve": "^6.0.1",
     "standard": "^10.0.2"
