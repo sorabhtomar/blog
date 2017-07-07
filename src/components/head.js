@@ -1,7 +1,7 @@
 // Packages
 import Head from 'next/head'
 
-export default ({ title, type, url, image, description, author }) =>
+export default ({ title, type, url, image, description }) =>
   <Head>
     <title>
       {title}
@@ -14,7 +14,10 @@ export default ({ title, type, url, image, description, author }) =>
     <meta property='og:image' content={image} />
     <meta property='og:description' content={description} />
     <meta property='og:site_name' content='jlobos' />
-    { author && <meta property='article:author' content='https://www.facebook.com/jlobitu' /> }
+    <meta
+      property='article:author'
+      content='https://www.facebook.com/jlobitu'
+    />
 
     {/* Twitter */}
     <meta name='twitter:description' content={description} />
@@ -24,7 +27,8 @@ export default ({ title, type, url, image, description, author }) =>
 
     {/* Google */}
     <link rel='canonical' href={url} />
+    <link rel='author' href='https://twitter.com/jlobitu' />
     <meta name='description' content={description} />
-    <meta property='author' content={author} />
     <meta name='robots' content='index, follow' />
+    <meta property='author' content='Jesus Lobos' />
   </Head>
