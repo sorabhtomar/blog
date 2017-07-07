@@ -4,3 +4,6 @@ node_modules
 # build output
 src/.next
 out
+
+# log
+firebase-debug.log
