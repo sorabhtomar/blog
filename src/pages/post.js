@@ -34,7 +34,7 @@ export default class extends React.Component {
           title={post.value.title}
           type='article'
           url={`https://jlobos.com/${post.value.slug}`}
-          img={post.injected.meta.image.url}
+          image={post.injected.meta.image.url}
           description={post.value.content.subtitle}
           author='Jesús Lobos'
         />

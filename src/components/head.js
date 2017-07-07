@@ -13,6 +13,8 @@ export default ({ title, type, url, image, description, author }) =>
     <meta property='og:url' content={url} />
     <meta property='og:image' content={image} />
     <meta property='og:description' content={description} />
+    <meta property='og:site_name' content='jlobos' />
+    { author && <meta property='article:author' content='https://www.facebook.com/jlobitu' /> }
 
     {/* Twitter */}
     <meta name='twitter:description' content={description} />

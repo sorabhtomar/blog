@@ -32,7 +32,7 @@ export default class extends React.Component {
           title='jlobos'
           type='website'
           url='https://jlobos.com/'
-          img={bg.url}
+          image={bg.url}
           description=''
           author='Jesús Lobos'
         />
