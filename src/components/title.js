@@ -1,13 +1,8 @@
-// Packages
-import Link from 'next/link'
-
 export default () =>
   <div>
-    <Link prefetch href='/'>
-      <a href='/'>
-        <h1>JLOBOS</h1>
-      </a>
-    </Link>
+    <a href='/'>
+      <h1>JLOBOS</h1>
+    </a>
 
     <style jsx>{`
       h1 {
