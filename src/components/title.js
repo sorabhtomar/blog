@@ -1,7 +1,9 @@
-export default () =>
+export default ({ title, url }) =>
   <div>
-    <a href='/'>
-      <h1>JLOBOS</h1>
+    <a href={url || '/'}>
+      <h1>
+        {title || 'JLOBOS'}
+      </h1>
     </a>
 
     <style jsx>{`
@@ -9,6 +11,7 @@ export default () =>
         color: var(--text-color);
         font-weight: 500;
         letter-spacing: .5rem;
+        text-align: center;
         text-transform: uppercase;
       }
     `}</style>

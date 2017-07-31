@@ -7,18 +7,20 @@ import Navegation from './navegation'
 
 export default class extends React.Component {
   render () {
+    const { pathname } = this.props
     const { url, credit } = this.props.image || {}
     const headerStyle = url
       ? {
         backgroundImage: `url(${url})`,
-        height: '60vh'
+        height: '60vh',
+        marginBottom: pathname === '/' ? '1rem' : '0'
       }
       : {}
 
     return (
       <header style={headerStyle}>
         <Navegation />
-        <Title />
+        <Title title={this.props.title} url={this.props.url} />
 
         {credit &&
           <p className='credit'>
@@ -33,7 +35,6 @@ export default class extends React.Component {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            margin-bottom: 1rem;
             padding: 1rem;
           }
 

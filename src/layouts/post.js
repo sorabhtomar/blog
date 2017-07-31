@@ -1,13 +1,21 @@
 // Ours
 import Main from './main'
 
-// Styles
-import postStyles from '../styles/post'
-
 export default ({ children }) =>
   <Main>
     {children}
-    <style jsx global>
-      {postStyles}
-    </style>
+
+    <style jsx global>{`
+      article a {
+        text-decoration: underline;
+      }
+
+      article a:hover {
+        color: var(--soft-color);
+      }
+
+      #disqus_thread {
+        margin-top: 2rem;
+      }
+    `}</style>
   </Main>

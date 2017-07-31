@@ -1,14 +1,5 @@
 // Packages
 import Head from 'next/head'
-import NProgress from 'nprogress'
-import Router from 'next/router'
-
-// Styles
-import rootStyles from '../styles/root'
-
-Router.onRouteChangeStart = () => NProgress.start()
-Router.onRouteChangeComplete = () => NProgress.done()
-Router.onRouteChangeError = () => NProgress.done()
 
 export default ({ children }) =>
   <div>
@@ -45,7 +36,53 @@ export default ({ children }) =>
 
     {children}
 
-    <style jsx global>
-      {rootStyles}
-    </style>
+    <style jsx global>{`
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      html,
+      body {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
+        height: 100%;
+        color: rgba(0, 0, 0, .8);
+      }
+
+      :root {
+        --high-color: #000;
+        --text-color: rgba(0, 0, 0, .8);
+        --soft-color: rgba(0, 0, 0, .6);
+      }
+
+      h1 {
+        font-size: 1.9rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      span,
+      p,
+      a,
+      code,
+      blockquote,
+      pre {
+        font-size: .9rem;
+      }
+
+      a {
+        color: var(--high-color);
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+    `}</style>
   </div>

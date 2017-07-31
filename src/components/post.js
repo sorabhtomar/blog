@@ -27,13 +27,10 @@ const Section = ({ description }) =>
     `}</style>
   </section>
 
-export const Footer = ({ createdAt, readingTime }) =>
+export const Footer = ({ createdAt }) =>
   <footer>
     <span className='date'>
       {moment(createdAt).format('LL')}
-    </span>
-    <span>
-      {Math.round(readingTime)} min read
     </span>
 
     <style jsx>{`
@@ -57,11 +54,8 @@ export default props =>
   <article>
     <a href={`/${props.slug}`}>
       <Header title={props.title} />
-      <Section description={props.virtuals.subtitle} />
-      <Footer
-        createdAt={props.createdAt}
-        readingTime={props.virtuals.readingTime}
-      />
+      <Section description={props.description} />
+      <Footer createdAt={props.createdAt} />
     </a>
 
     <style jsx>{`
