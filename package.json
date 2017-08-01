@@ -17,6 +17,7 @@
     ]
   },
   "dependencies": {
+    "cookieconsent": "^3.0.4",
     "moment": "^2.18.1",
     "next": "beta",
     "react": "^15.6.1",

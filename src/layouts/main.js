@@ -1,5 +1,6 @@
 // Packages
 import Head from 'next/head'
+import CookieConsent from '../components/cookieconsent'
 
 export default ({ children }) =>
   <div>
@@ -35,6 +36,9 @@ export default ({ children }) =>
     </Head>
 
     {children}
+
+    {/* EU Cookie Law */}
+    <CookieConsent />
 
     <style jsx global>{`
       *,
