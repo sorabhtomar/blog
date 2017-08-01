@@ -3,12 +3,11 @@
   "description": "jlobos.com (blog)",
   "scripts": {
     "dev": "next src",
-    "build": "next build src && next export src -o out",
-    "start": "serve out",
+    "build": "next build src && next export src -o out && cp src/public/* out",
+    "start": "firebase serve",
     "test": "standard",
-    "clean": "rimraf src/.next out/*",
     "precommit": "lint-staged",
-    "deploy": "npm run test && npm run clean && npm run build && firebase deploy"
+    "deploy": "npm run test && npm run build && firebase deploy"
   },
   "lint-staged": {
     "*.js": [
@@ -19,7 +18,7 @@
   },
   "dependencies": {
     "moment": "^2.18.1",
-    "next": "3.0.1-beta.20",
+    "next": "beta",
     "react": "^15.6.1",
     "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1"
@@ -28,8 +27,6 @@
     "husky": "^0.14.3",
     "lint-staged": "^4.0.2",
     "prettier": "^1.5.3",
-    "rimraf": "^2.6.1",
-    "serve": "^6.0.4",
     "standard": "^10.0.2"
   }
 }
