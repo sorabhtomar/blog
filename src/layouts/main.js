@@ -75,6 +75,7 @@ export default ({ children }) =>
       a,
       code,
       blockquote,
+      time,
       pre {
         font-size: .9rem;
       }

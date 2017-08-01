@@ -6,11 +6,12 @@ const H = ({ id, level = 2, fontSize = '1.6rem', children }) =>
       `h${level}`,
       { style: { fontSize, marginBottom: '1.6rem' } },
       children,
-      <span>
-        {' '}<a style={{ fontSize }} href={`#${id}`} id={id}>
-          #
-        </a>
-      </span>
+      id &&
+        <span>
+          {' '}<a style={{ fontSize }} href={`#${id}`} id={id}>
+            #
+          </a>
+        </span>
     )}
 
     <style jsx>{`

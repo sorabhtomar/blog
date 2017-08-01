@@ -10,6 +10,7 @@ const Header = ({ title }) =>
 
     <style jsx>{`
       h2 {
+        color: var(--high-color);
         padding: 1rem 0;
       }
     `}</style>
@@ -22,6 +23,7 @@ const Section = ({ description }) =>
     </p>
     <style jsx>{`
       p {
+        color: var(--text-color);
         line-height: 1.5;
       }
     `}</style>

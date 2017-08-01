@@ -8,6 +8,8 @@ import Post from '../components/post'
 import Footer from '../components/footer'
 import Head from '../components/head'
 
+import Menu from '../components/menu'
+
 // Ours
 import posts from '../posts.json'
 
@@ -22,7 +24,7 @@ export default class extends React.Component {
     return (
       <App>
         <Head
-          title='jlobos'
+          title='Jesus Lobos – jlobos'
           type='website'
           url='https://jlobos.com/'
           image={bg.url}
@@ -30,7 +32,8 @@ export default class extends React.Component {
           author='Jesús Lobos'
         />
 
-        <Header image={bg} pathname={this.props.url.pathname} />
+        <Header image={bg} />
+        <Menu />
         <main>
           {posts.map((post, i) => <Post {...post} key={i} />)}
         </main>
@@ -38,7 +41,7 @@ export default class extends React.Component {
 
         <style jsx>{`
           main {
-            margin: 0 auto;
+            margin: 1rem auto;
             max-width: 768px;
           }
         `}</style>

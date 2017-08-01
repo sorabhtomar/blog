@@ -7,25 +7,24 @@ import Navegation from './navegation'
 
 export default class extends React.Component {
   render () {
-    const { pathname } = this.props
     const { url, credit } = this.props.image || {}
     const headerStyle = url
       ? {
         backgroundImage: `url(${url})`,
-        height: '60vh',
-        marginBottom: pathname === '/' ? '1rem' : '0'
+        height: '60vh'
       }
-      : {}
+      : { height: '60vh' }
 
     return (
       <header style={headerStyle}>
         <Navegation />
         <Title title={this.props.title} url={this.props.url} />
 
-        {credit &&
-          <p className='credit'>
+        {credit
+          ? <p className='credit'>
             {credit}
-          </p>}
+          </p>
+          : <br />}
 
         <style jsx>{`
           header {

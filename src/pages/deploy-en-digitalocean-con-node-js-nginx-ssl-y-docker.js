@@ -4,9 +4,10 @@ import Disqus from 'react-disqus-comments'
 // Components
 import App from '../layouts/post'
 import Header from '../components/header'
-import { Footer as Meta } from '../components/post'
 import Head from '../components/head'
 import Footer from '../components/footer'
+import Menu from '../components/menu'
+import Time from '../components/time'
 
 // Semantics
 import P from '../components/post/paragraph'
@@ -49,10 +50,11 @@ export default () =>
     />
 
     <Header image={headerImage} title={title} url={`/${slug}`} />
+    <Menu />
 
     <Article>
       <header>
-        <Meta createdAt={createdAt} />
+        <Time createdAt={createdAt} />
       </header>
       <section>
         <P>
@@ -196,13 +198,14 @@ docker run --name nginx -v nginx-certs:/etc/nginx/certs:ro -p 80:80 -p 443:443 -
           obtener un A+.
         </P>
       </section>
-      <Footer>
+      <footer>
         <Disqus
           shortname='jlobos'
           identifier={slug}
           title={title}
           url={`https://jlobos.com/${slug}`}
         />
-      </Footer>
+      </footer>
     </Article>
+    <Footer />
   </App>

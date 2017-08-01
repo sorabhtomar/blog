@@ -4,9 +4,10 @@ import Disqus from 'react-disqus-comments'
 // Components
 import App from '../layouts/post'
 import Header from '../components/header'
-import { Footer as Meta } from '../components/post'
 import Head from '../components/head'
 import Footer from '../components/footer'
+import Menu from '../components/menu'
+import Time from '../components/time'
 
 // Semantics
 import P from '../components/post/paragraph'
@@ -34,10 +35,11 @@ export default () =>
     />
 
     <Header image={headerImage} title={title} url={`/${slug}`} />
+    <Menu />
 
     <Article>
       <header>
-        <Meta createdAt={createdAt} />
+        <Time createdAt={createdAt} />
       </header>
       <section>
         <P>
@@ -105,13 +107,14 @@ export default () =>
           />
         </Figure>
       </section>
-      <Footer>
+      <footer>
         <Disqus
           shortname='jlobos'
           identifier={slug}
           title={title}
           url={`https://jlobos.com/${slug}`}
         />
-      </Footer>
+      </footer>
     </Article>
+    <Footer />
   </App>
