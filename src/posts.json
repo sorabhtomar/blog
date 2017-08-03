@@ -1,5 +1,12 @@
 [
   {
+    "title": "Validar RUT",
+    "description": "En ocasiones nos toca lidiar con el Rol Único Tributario comúnmente conocido como RUT, ya sea en validaciones de formularios, a la hora de guardarlo en una base de datos, etc.",
+    "createdAt": 1501788982620,
+    "updatedAt": 1501788982620,
+    "slug": "validar-rut"
+  },
+  {
     "title": "Olvidémonos de comparar librerías",
     "description": "Existe una batalla tremenda a la hora de escoger un framework o librería en nuestros proyectos web, comparar React.js, Vue.js, Angular, etc…",
     "createdAt": 1500946527947,
