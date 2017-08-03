@@ -80,6 +80,10 @@ export default ({ children }) =>
       code,
       blockquote,
       time,
+      li,
+      tr,
+      th,
+      td,
       pre {
         font-size: .9rem;
       }
