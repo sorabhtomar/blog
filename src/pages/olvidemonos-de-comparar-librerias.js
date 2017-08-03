@@ -102,7 +102,7 @@ export default () =>
         </P>
         <Figure desc='Open Source violento y locura'>
           <Image
-            src='http://i.imgur.com/uGxoVgI.jpg'
+            src='https://i.imgur.com/uGxoVgI.jpg'
             alt='Open Source violento y locura'
           />
         </Figure>

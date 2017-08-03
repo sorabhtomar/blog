@@ -282,7 +282,7 @@ Total de la suma de los productos: 169
           </a>:
         </P>
         <Image
-          src='http://i.imgur.com/zEpRpgq.jpg'
+          src='https://i.imgur.com/zEpRpgq.jpg'
           alt='Minificación y GZIP de las librería para trabajar con el RUT'
         />
         <H2 id='validar-rut-con-jquery'>Validar RUT con jQuery</H2>
@@ -299,7 +299,7 @@ Total de la suma de los productos: 169
         <P>
           Para Angular he encontrado dos librerías desarrolladas por el equipo
           de{' '}
-          <a href='http://github.com/platanus' target='_blank'>
+          <a href='https://github.com/platanus' target='_blank'>
             Platanus
           </a>:
         </P>
