@@ -84,8 +84,17 @@ export default ({ children }) =>
       tr,
       th,
       td,
+      label,
+      input,
+      textarea,
+      button,
       pre {
         font-size: .9rem;
+      }
+
+      button,
+      textarea {
+        font-family: 'Montserrat', sans-serif;
       }
 
       a {
