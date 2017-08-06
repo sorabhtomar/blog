@@ -10,7 +10,7 @@ export default () =>
           <a href='/'>Home</a>
         </li>
         <li>
-          <a href='#'>Fábulas</a>
+          <a href='/contacto'>Contacto</a>
         </li>
         <li className='right'>
           <a href='https://twitter.com/jlobitu' target='__black'>

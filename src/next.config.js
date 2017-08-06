@@ -16,7 +16,8 @@ module.exports = {
     // Combine the map of post pages with other pages
     return Object.assign({}, pages, {
       '/': { page: '/' },
-      '/politica-de-privacidad': { page: '/politica-de-privacidad' }
+      '/politica-de-privacidad': { page: '/politica-de-privacidad' },
+      '/contacto': { page: '/contacto' }
     })
   }
 }
