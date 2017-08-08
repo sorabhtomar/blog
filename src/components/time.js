@@ -2,7 +2,7 @@
 import moment from 'moment'
 
 export default ({ createdAt }) =>
-  <time datetime={moment(createdAt).toISOString()}>
+  <time dateTime={moment(createdAt).toISOString()}>
     {moment(createdAt).format('LL')}
 
     <style jsx>{`
