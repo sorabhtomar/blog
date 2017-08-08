@@ -17,6 +17,7 @@ import Snippet from '../components/post/snippet'
 import OL, { LI as OLI } from '../components/post/numbers-list'
 import TABLE, { THEAD, TBODY, TR, TH, TD } from '../components/post/table'
 import { Image } from '../components/post/figure'
+import Code from '../components/post/code'
 
 // Ours
 import posts from '../posts.json'
@@ -65,6 +66,11 @@ export default () =>
           </OLI>
           <OLI>
             <a href='#validar-rut-en-vue'>Validar RUT en Vue</a>
+          </OLI>
+          <OLI>
+            <a href='#expresion-regular-para-el-rut'>
+              Expresión Regular para el RUT
+            </a>
           </OLI>
         </OL>
         <H2 id='algoritmo-formula-para-validar-rut-calculando-digito-verificador'>
@@ -332,6 +338,27 @@ Total de la suma de los productos: 169
           <OLI>
             <a href='https://github.com/platanus/vue-dni' target='_blank'>
               Vue DNI Validator
+            </a>
+          </OLI>
+        </OL>
+        <H2 id='expresion-regular-para-el-rut'>
+          Expresión Regular para el RUT
+        </H2>
+        <P>
+          Si deseamos trabajar con expresiones regulares como patrón para
+          identificar si una cadena es un RUT, podemos usar la siguiente
+          expresión regular:
+        </P>
+        <Snippet>{`^0*(\\d{1,3}(\\.?\\d{3})*)-?([\\dkK])$`}</Snippet>
+        <P>
+          En Javascript podemos hacer uso de la siguiente librería que
+          implementa la expresión regular descrita. Esta librería retorna un
+          nuevo objeto <Code>new RegExp()</Code>:
+        </P>
+        <OL>
+          <OLI>
+            <a href='https://github.com/jlobos/rut-regex' target='_blank'>
+              Regular expression for matching Chile RUTs
             </a>
           </OLI>
         </OL>
