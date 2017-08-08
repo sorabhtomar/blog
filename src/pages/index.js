@@ -33,7 +33,7 @@ export default class extends React.Component {
         />
 
         <Header image={bg} />
-        <Menu />
+        <Menu pathname={this.props.url.pathname} />
         <main>
           {posts.map((post, i) => <Post {...post} key={i} />)}
         </main>

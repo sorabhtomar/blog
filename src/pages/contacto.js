@@ -8,14 +8,14 @@ import Header from '../components/header'
 import Menu from '../components/menu'
 import Contact from '../components/contact'
 
-export default () =>
+export default ({ url }) =>
   <App>
     <Head>
       <title>Contacto – jlobos</title>
     </Head>
 
     <Header title='Contacto' url='/contacto' />
-    <Menu />
+    <Menu pathname={url.pathname} />
     <Contact />
     <Footer />
   </App>
