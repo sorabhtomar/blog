@@ -2,19 +2,15 @@
 import Twitter from '../components/svg/twitter'
 import GitHub from '../components/svg/github'
 
-export default ({ pathname }) =>
+export default () =>
   <div>
     <nav>
       <ul>
         <li>
-          <a href='/' className={pathname === '/' && 'press'}>
-            Home
-          </a>
+          <a href='/'>Home</a>
         </li>
         <li>
-          <a href='/contacto' className={pathname === '/contacto' && 'press'}>
-            Contacto
-          </a>
+          <a href='/contacto'>Contacto</a>
         </li>
         <li className='right'>
           <a href='https://twitter.com/jlobitu' target='__black'>
@@ -63,10 +59,6 @@ export default ({ pathname }) =>
       }
 
       a:hover {
-        color: var(--soft-color);
-      }
-
-      .press {
         color: var(--soft-color);
       }
     `}</style>
