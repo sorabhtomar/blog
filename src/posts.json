@@ -1,5 +1,16 @@
 [
   {
+    "title": "¿Que es Prettier?",
+    "description": "Prettier es un formateador de código increíble, actualmente soporta Javascript, CSS y GraphQL su desarrollo es constante y cada vez son más los sintaxis que se agregan: ES2017, JSX, Flow, TypeScript, JSON, LESS, SCSS, styled-components & styled-jsx",
+    "createdAt": 1502479668551,
+    "updatedAt": 1502479668551,
+    "slug": "que-es-prettier",
+    "headerImage": {
+      "url": "https://images.unsplash.com/photo-1493407497798-75e53a4ec21f?&w=1080&h=720",
+      "credit": "Photo by Igor Ovsyannykov on Unsplash"
+    }
+  },
+  {
     "title": "Validar RUT",
     "description": "En ocasiones nos toca lidiar con el Rol Único Tributario comúnmente conocido como RUT, ya sea en validaciones de formularios, a la hora de guardarlo en una base de datos, etc.",
     "createdAt": 1501788982620,
