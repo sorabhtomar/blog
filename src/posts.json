@@ -14,7 +14,7 @@
     "title": "Validar RUT",
     "description": "En ocasiones nos toca lidiar con el Rol Único Tributario comúnmente conocido como RUT, ya sea en validaciones de formularios, a la hora de guardarlo en una base de datos, etc.",
     "createdAt": 1501788982620,
-    "updatedAt": 1502229972197,
+    "updatedAt": 1502837126644,
     "slug": "validar-rut"
   },
   {
