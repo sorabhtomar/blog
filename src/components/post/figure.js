@@ -25,7 +25,7 @@ const Image = ({ width, src, alt }) =>
       img {
         display: block;
         height: auto;
-        margin-bottom: 1.6rem;
+        margin: 0 auto 1.6rem auto;
         max-width: 100%;
       }
     `}</style>
