@@ -23,9 +23,11 @@ const Image = ({ width, src, alt }) =>
     <img width={width} src={src} alt={alt} />
     <style jsx>{`
       img {
+        border-radius: 3px;
+        box-shadow: 0 20px 60px -10px rgba(0, 0, 0, .3);
         display: block;
         height: auto;
-        margin: 0 auto 1.6rem auto;
+        margin: 3rem auto;
         max-width: 100%;
       }
     `}</style>
