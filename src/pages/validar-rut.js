@@ -288,7 +288,7 @@ Total de la suma de los productos: 169
           </a>:
         </P>
         <Image
-          src='https://i.imgur.com/zEpRpgq.jpg'
+          src='https://firebasestorage.googleapis.com/v0/b/evilpudu.appspot.com/o/Posts%2Fvalidar-rut%2Fshadow-screenshot.3.png?alt=media&token=f1b81502-9d58-4e5f-9853-e49a8329c6ad'
           alt='Minificación y GZIP de las librería para trabajar con el RUT'
         />
         <H2 id='validar-rut-con-jquery'>Validar RUT con jQuery</H2>
