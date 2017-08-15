@@ -182,7 +182,9 @@ ReactDOM.render(app, root);`}</Snippet>
           formateados sin punto y coma y con comillas simples en lugar de
           dobles.
         </P>
-        <H2>Prettier en nuestro editor favorito</H2>
+        <H2 id='prettier-en-nuestro-editor-favorito'>
+          Prettier en nuestro editor favorito
+        </H2>
         <P>Podemos integrar Prettier fácilmente en diferentes editores:</P>
         <UL>
           <LI>
