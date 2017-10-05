@@ -1,5 +1,12 @@
 [
   {
+    "title": "Deploy SSH en Travis CI",
+    "description": "Travis CI nos permite una integración con los repositorios de GitHub, una de las tareas habituales es la de realizar deploy desde el propio repositorio. En este artículo explicaremos una integración SSH desde Travis hacia el servidor.",
+    "createdAt": 1507215751203,
+    "updatedAt": 1507215751203,
+    "slug": "deploy-ssh-en-travis-ci"
+  },
+  {
     "title": "Servicios gratuitos para alojar Node.js Apps",
     "description": "A la hora de montar un servidor escrito en Node.js existen diferentes servicios que nos permiten alojar nuestra aplicación; en este artículo hablaremos de aquellos que sin gastar un peso nos permitan disfrutar de un entorno en Node.js 💚",
     "createdAt": 1507135687137,
