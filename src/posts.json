@@ -1,5 +1,12 @@
 [
   {
+    "title": "Integrar Slack con nuestras Node.js apps",
+    "description": "Una forma amigable de notificarme qué está pasando con mis apps es mediante un bonito mensaje que recibo desde un chat de Slack, integrando los Webhooks de Slack con Node.js",
+    "createdAt": 1507297860300,
+    "updatedAt": 1507297860300,
+    "slug": "integrar-slack-con-nuestras-node-js-apps"
+  },
+  {
     "title": "Deploy SSH en Travis CI",
     "description": "Travis CI nos permite una integración con los repositorios de GitHub, una de las tareas habituales es la de realizar deploy desde el propio repositorio. En este artículo explicaremos una integración SSH desde Travis hacia el servidor.",
     "createdAt": 1507215751203,
