@@ -1,5 +1,16 @@
 [
   {
+    "title": "Plugins recomendados para Vim (Neovim)",
+    "description": "En estos momentos mi editor de código favorito es Neovim una versión moderna de Vim, hoy describiré algunos plugins que uso diariamente y una que otra de mis configuraciones.",
+    "createdAt": 1507397413884,
+    "updatedAt": 1507397413884,
+    "slug": "plugins-recomendados-para-vim-neovim",
+    "headerImage": {
+      "url": "https://firebasestorage.googleapis.com/v0/b/evilpudu.appspot.com/o/Posts%2Fplugins-recomendados-para-vim-neovim%2Fartem-sapegin-176819.jpg?alt=media&token=2cbc7f7e-9286-4304-aedf-fcb0e9b816b3",
+      "credit": "Photo by Artem Sapegin on Unsplash"
+    }
+  },
+  {
     "title": "Integrar Slack con nuestras Node.js apps",
     "description": "Una forma amigable de notificarme qué está pasando con mis apps es mediante un bonito mensaje que recibo desde un chat de Slack, integrando los Webhooks de Slack con Node.js",
     "createdAt": 1507297860300,
