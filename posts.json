@@ -1,0 +1,82 @@
+[
+  {
+    "title": "Plugins recomendados para Vim (Neovim)",
+    "description":
+      "En estos momentos mi editor de código favorito es Neovim una versión moderna de Vim, hoy describiré algunos plugins que uso diariamente y una que otra de mis configuraciones.",
+    "createdAt": 1507397413884,
+    "updatedAt": 1507397413884,
+    "slug": "plugins-recomendados-para-vim-neovim"
+  },
+  {
+    "title": "Integrar Slack con nuestras Node.js apps",
+    "description":
+      "Una forma amigable de notificarme qué está pasando con mis apps es mediante un bonito mensaje que recibo desde un chat de Slack, integrando los Webhooks de Slack con Node.js",
+    "createdAt": 1507297860300,
+    "updatedAt": 1507297860300,
+    "slug": "integrar-slack-con-nuestras-node-js-apps"
+  },
+  {
+    "title": "Deploy SSH en Travis CI",
+    "description":
+      "Travis CI nos permite una integración con los repositorios de GitHub, una de las tareas habituales es la de realizar deploy desde el propio repositorio. En este artículo explicaremos una integración SSH desde Travis hacia el servidor.",
+    "createdAt": 1507215751203,
+    "updatedAt": 1507215751203,
+    "slug": "deploy-ssh-en-travis-ci"
+  },
+  {
+    "title": "Servicios gratuitos para alojar Node.js Apps",
+    "description":
+      "A la hora de montar un servidor escrito en Node.js existen diferentes servicios que nos permiten alojar nuestra aplicación; en este artículo hablaremos de aquellos que sin gastar un peso nos permitan disfrutar de un entorno en Node.js 💚",
+    "createdAt": 1507135687137,
+    "updatedAt": 1507135687137,
+    "slug": "servicios-gratuitos-para-alojar-node-js-apps"
+  },
+  {
+    "title": "¿Que es Prettier?",
+    "description":
+      "Prettier es un formateador de código increíble, actualmente soporta Javascript, CSS y GraphQL su desarrollo es constante y cada vez son más los sintaxis que se agregan: ES2017, JSX, Flow, TypeScript, JSON, LESS, SCSS, styled-components & styled-jsx",
+    "createdAt": 1502479668551,
+    "updatedAt": 1502479668551,
+    "slug": "que-es-prettier"
+  },
+  {
+    "title": "Validar RUT",
+    "description":
+      "En ocasiones nos toca lidiar con el Rol Único Tributario comúnmente conocido como RUT, ya sea en validaciones de formularios, a la hora de guardarlo en una base de datos, etc.",
+    "createdAt": 1501788982620,
+    "updatedAt": 1502837126644,
+    "slug": "validar-rut"
+  },
+  {
+    "title": "Olvidémonos de comparar librerías",
+    "description":
+      "Existe una batalla tremenda a la hora de escoger un framework o librería en nuestros proyectos web, comparar React.js, Vue.js, Angular, etc…",
+    "createdAt": 1500946527947,
+    "updatedAt": 1500987661841,
+    "slug": "olvidemonos-de-comparar-librerias"
+  },
+  {
+    "title": "Autenticación de GraphQL con JSON Web Tokens parte 2",
+    "description":
+      "Describiremos una autenticación a nivel de consultas con GraphQL y JSON Web Tokens.",
+    "createdAt": 1499414526547,
+    "updatedAt": 1499417462891,
+    "slug": "autenticacion-de-graphql-con-json-web-tokens-parte-2"
+  },
+  {
+    "title": "Autenticación de GraphQL con JSON Web Tokens parte 1",
+    "description":
+      "Hoy hablaremos de diferentes formas para estructurar un sistema de autenticación en GraphQL y express, manejando la validación por rutas o…",
+    "createdAt": 1499405144634,
+    "updatedAt": 1499413755023,
+    "slug": "autenticacion-de-graphql-con-json-web-tokens-parte-1"
+  },
+  {
+    "title": "Deploy en Digitalocean con Node.js Nginx SSL y Docker",
+    "description":
+      "En este artículo explicaré como montar una arquitectura de principio a fin con Node.js, Nginx como proxy y un certificado gratis SSL con…",
+    "createdAt": 1499317079637,
+    "updatedAt": 1499411148044,
+    "slug": "deploy-en-digitalocean-con-node-js-nginx-ssl-y-docker"
+  }
+]

@@ -1,34 +1,50 @@
 {
-  "name": "jlobos-blog",
-  "description": "jlobos.com (blog)",
   "scripts": {
-    "dev": "next src",
-    "build": "next build src && next export src -o out && cp src/public/* out",
+    "dev": "next",
+    "build": "next build && next export -o public",
     "start": "firebase serve",
-    "test": "standard",
+    "lint": "xo",
     "precommit": "lint-staged",
-    "deploy": "npm run test && npm run build && firebase deploy"
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
   },
   "lint-staged": {
     "*.js": [
-      "prettier --single-quote --no-semi --write",
-      "standard --fix",
+      "npm run lint",
+      "prettier --write",
       "git add"
     ]
   },
+  "xo": {
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/display-name": 0,
+      "react/no-unescaped-entities": 0,
+      "react/prop-types": 0,
+      "react/react-in-jsx-scope": 0
+    }
+  },
   "dependencies": {
-    "cookieconsent": "^3.0.4",
-    "isomorphic-fetch": "^2.2.1",
-    "moment": "^2.18.1",
-    "next": "^3.2.2",
-    "react": "^15.6.2",
-    "react-disqus-comments": "^1.0.3",
-    "react-dom": "^15.6.2"
+    "moment": "^2.20.1",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-xo-react": "^0.16.0",
+    "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.3",
-    "prettier": "^1.7.3",
-    "standard": "^10.0.3"
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.0",
+    "xo": "^0.20.3"
   }
 }
